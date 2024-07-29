@@ -1,5 +1,5 @@
 # 💫 About Me:
-🔭 I’m currently working on [Weather App](https://github.com/danvluewubley/weather-app)<br>🌱 I’m currently learning Python Flask<br>📫 How to reach me danielw72908@gmail.com<br>📄 Know about my experiences https://sapphire-inez-73.tiiny.site
+🔭 I’m currently working on [Weather App](https://github.com/danvluewubley/weather-app)<br>🌱 I’m currently learning Tailwind and React.js<br>📫 How to reach me danielw72908@gmail.com<br>📄 Know about my experiences https://sapphire-inez-73.tiiny.site
 
 
 ## 🌐 Socials:
