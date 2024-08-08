@@ -5,7 +5,7 @@ name: Generate Snake
 # Controls when the action will run. This action runs every 6 hours.
 on:
   schedule:
-      # every 6 hours
+    # every 6 hours
     - cron: "0 */6 * * *"
 
   # This command allows us to run the Action automatically from the Actions tab.
@@ -23,7 +23,7 @@ jobs:
       # Checks repo under $GITHUB_WORKSHOP, so your job can access it
       - uses: actions/checkout@v2
 
-      # Generates the snake  
+      # Generates the snake
       - uses: Platane/snk@master
         id: snake-gif
         with:
@@ -37,11 +37,14 @@ jobs:
 
       # Push the changes
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-          branch: master
-          force: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add .
+          git commit -m "Generated snake gif"
+          git push origin master
 
       - uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
